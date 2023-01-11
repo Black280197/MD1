@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+<input type="number" id="year">
+<button onclick="kt_nam_nhuan()">Kiểm tra</button>
+<p id="Result"></p>
+
+<script>
+    function kt_nam_nhuan() {
+        let year = document.getElementById("year").value;
+        let kt4 = year % 4 == 0;
+        let kt100 = year % 100 == 0;
+        let kt400 = year % 400 == 0;
+        if (kt4) {
+            if (kt100) {
+                if (kt400) {
+                    document.getElementById("Result").innerHTML = "Đây là năm nhuận";
+                } else
+                    document.getElementById("Result").innerHTML = "Đây không phải năm nhuận";
+            } else
+                document.getElementById("Result").innerHTML = "Đây là năm nhuận";
+                } else
+                    document.getElementById("Result").innerHTML = "Đây không phải là năm nhuận";
+    }
+</script>
+</body>
+</html>
