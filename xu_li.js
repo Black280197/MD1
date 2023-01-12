@@ -7,6 +7,7 @@ function hien(value) {
         kt = 0;
     }
         view.value += value;
+    console.log(view); console.log(typeof(view)); console.log(view.value); console.log(typeof(view.value));
 }
 
 function xoa() {
