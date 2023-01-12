@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiện số ngày trong tháng</title>
+</head>
+<body>
+<h1>Tính số ngày trong tháng</h1>
+<input type="number" min="1" max="12" id="month" placeholder="Nhập tháng" style="width: 30%">
+<button onclick="Month()">Tính số ngày</button>
+<hr/>
+<p id="result">Nhập tháng mà bạn định tính</p>
+<script>
+    function Month() {
+        console.log(typeof(document.getElementById("month").value));
+        let m = parseInt(document.getElementById("month").value); console.log(m) ;
+        switch (m) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").innerHTML = "Tháng " + m + " có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("result").innerHTML = "Tháng " + m + " có 28 hoặc 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("result").innerHTML = "Tháng " + m + " có 30 ngày";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Tháng không hợp lệ, xin nhập lại!";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
